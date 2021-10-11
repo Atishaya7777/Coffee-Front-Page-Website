@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.overall {
+  height: 100px;
+  background: linear-gradient(to right, #dddddd, #f6f6f6, #dddddd);
+}
+
+h1 {
+  overflow: hidden;
+  text-align: center;
+  font-size: 30px;
+}
+
+h1:before,
+h1:after {
+  border-top: 2px solid #baa261;
+  border-bottom: 2px solid #baa261;
+  background: transparent;
+  content: "";
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  vertical-align: middle;
+  width: 10%;
+  padding: 10px;
+}
+
+h1:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+h1:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+hr {
+  height: 2px;
+  background: #b1b1b1;
+}
+
+.left {
+  width: 20%;
+  margin-left: 25%;
+  position: relative;
+  top: 25px;
+}
+
+.right {
+  position: relative;
+  width: 20%;
+  margin-left: 55%;
+  bottom: 22px;
+}

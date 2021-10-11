@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AIAA,AAAA,CAAC,CAAC;EACA,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,UAAU;CACvB;;AACD,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,4BAA4B,CAAC,SAAS;CACnD",
+    "sources": [
+        "main.sass",
+        "abstracts/_index.scss",
+        "abstracts/_colors.scss",
+        "common/_index.scss",
+        "common/_root.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

@@ -1,0 +1,499 @@
+/* Resetting browser margins */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Getting height full 100% and hiding the side scrollbar */
+body,
+html {
+  height: 100%;
+  overflow: overlay;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Old Standard TT", serif;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: #0c0c0c;
+  padding: 0px 0px 40px;
+  text-align: justify;
+}
+
+/* hero */
+.hero-image {
+  /* linear-gradient will add a darken background effect to the image */
+  background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.6)),
+      to(rgba(0, 0, 0, 0.8))
+    ),
+    url("../Images/hero-image.jpeg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("../Images/hero-image.jpeg");
+  /* Specific height for the image */
+  height: 110vh;
+  width: 100%;
+  /* position and center the image to scale the screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 50;
+}
+
+/* position absolute to the position ancestor, in this case relative */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #e4e4e4;
+  font-size: 3.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+}
+
+.hero-text_sub {
+  font-size: 3.9rem;
+  font-family: "Ruthie", cursive;
+  font-weight: lighter;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.1em solid #e4e4e4;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.1em;
+  /* Adjust as needed */
+  -webkit-animation: typing 3s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  display: inline-block;
+}
+
+/* Typewriter animation of the hero text */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@-webkit-keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #e4e4e4;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #e4e4e4;
+  }
+}
+
+/* Navigation bar logo */
+.navbar-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+/* Navigation bar */
+.navbar-container {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  -ms-overflow-style: none;
+  /* IE and Edge scrollbar hide */
+  scrollbar-width: none;
+  /* Firefox scrollbar hide*/
+}
+
+/* Style of the highest parent div of navbar */
+.navbar {
+  background-color: #110900;
+  opacity: 0.7;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+/* hide scrollbar for navigation bar */
+.navbar-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Navbar items */
+.navbar-items-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+/* Adjusting the navbar items in horizontal format filling the whole screen */
+.navbar-items-ul li {
+  text-align: center;
+  position: relative;
+  list-style: none;
+  word-spacing: 1px;
+  margin: 0;
+  padding: 0;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+/* Adjusting the links for the navbar content */
+.navbar-items-ul li a {
+  color: #c9c8c3;
+  text-decoration: none;
+  padding: 5px;
+  font-family: "Bad Script", cursive;
+  font-weight: bold;
+  display: block;
+}
+
+/* Changing the background color when hovering around the navbar items */
+.navbar-items-ul li :hover {
+  background-color: #3b2103;
+}
+
+/* Permanently changing the background color of the active page; manual */
+.navbar-items__active {
+  background-color: #6d3c05;
+}
+
+/* Navbar search */
+/* custom scroll bar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* bar;transparent */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+/* handle; transparent */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 15px;
+}
+
+/* Change background color of scrollbar when hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3b2103;
+}
+
+/* Triangle sector divider */
+.triangle-left,
+.triangle-right {
+  position: absolute;
+  width: calc(50% - 3em);
+  height: 3em;
+  bottom: 0;
+  color: #dddddd;
+}
+
+/* .triangle-left,
+.triangle-right,
+.triangle-down {
+  z-index: 50;
+} */
+.triangle-left {
+  left: 0;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ddd),
+    to(#f4f4f4)
+  );
+  background: linear-gradient(to right, #ddd, #f4f4f4);
+}
+
+.triangle-right {
+  right: 0;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#f5f5f5),
+    to(#dddddd)
+  );
+  background: linear-gradient(to right, #f5f5f5, #dddddd);
+}
+
+.triangle-down {
+  right: 0;
+  left: 0;
+  background: #c0c5c1;
+}
+
+.triangle-left::after,
+.triangle-right::after,
+.triangle-down::after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  top: 0;
+}
+
+.triangle-left::after {
+  border-width: 1.5em 0 1.5em 3em;
+  border-color: transparent transparent transparent #f4f4f4;
+  right: -3em;
+}
+
+.triangle-right::after {
+  border-width: 1.5em 3em 1.5em 0;
+  border-color: transparent #f4f4f4 transparent transparent;
+  left: -3em;
+}
+
+.triangle-down::after {
+  border-width: 0 3.2em 1.6em 3.2em;
+  border-color: transparent transparent #f5f5f5 transparent;
+  bottom: 0px;
+  left: calc(50% - 3em - 3px);
+  top: auto;
+}
+
+/* First content */
+.first-content {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#dddddd),
+    color-stop(#f6f6f6),
+    to(#dddddd)
+  );
+  background: linear-gradient(to right, #dddddd, #f6f6f6, #dddddd);
+  padding: 20px;
+}
+
+.first-content h2 {
+  text-align: center;
+  font-family: "STIX Two Text", serif;
+  font-weight: lighter;
+  font-size: 50px;
+  color: black;
+  padding: 0px 0px 40px !important;
+}
+
+.first-content p {
+  padding: 0 0 40px;
+}
+
+.first-content_firstpic {
+  float: right;
+}
+
+.first-content h2 {
+  overflow: hidden;
+  text-align: center;
+  font-size: 30px;
+}
+
+.first-content h2::after,
+.first-content h2::before {
+  position: relative;
+  bottom: 3px;
+  border-top: 2px solid #4f2b05;
+  border-bottom: 2px solid #4f2b05;
+  background: transparent;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  vertical-align: middle;
+  width: 10%;
+  padding: 10px;
+}
+
+.first-content h2:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.first-content h2::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+/* Call to Action button */
+.cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  padding: 40px;
+}
+
+.cta-button {
+  padding: 20px;
+  color: #4f2b05;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "STIX Two Text", serif;
+  font-weight: lighter;
+  border: 3px solid currentColor;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-box-shadow: 5px 5px 10px #969494;
+  box-shadow: 5px 5px 10px #969494;
+}
+
+.cta-button:hover {
+  color: #f5f5f5;
+  background: #532e07;
+  border-color: #532e07;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-box-shadow: 5px 5px 10px #969494;
+  box-shadow: 5px 5px 10px #969494;
+}
+
+/* CTA line */
+.cta-button_line {
+  position: relative;
+  top: 30px;
+  border-top: 2px solid #4f2b05;
+  height: 0;
+  background: transparent;
+  content: "";
+  display: inline-block;
+  height: 5px;
+  vertical-align: middle;
+  width: 25%;
+}
+
+/* Footer */
+.footer {
+  position: static;
+  background: #212121;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 15px;
+  color: #a3a3a3;
+  padding: 0px 150px 0px 150px;
+}
+
+.footer-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr) [4];
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  -webkit-column-gap: 2px;
+  column-gap: 2px;
+}
+
+.footer-grid ul,
+.footer-grid a,
+.footer-grid-fonts,
+.footer-grid_logo {
+  color: #a3a3a3;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.footer-grid_logo {
+  position: relative;
+  text-align: center;
+  top: 50px;
+  font-size: 30px;
+}
+
+.footer-grid-fonts_links a:hover,
+.footer-grid-references li a:hover,
+.footer-grid_logo:hover {
+  color: #af6817;
+}
+
+.footer-grid-fonts i {
+  font-size: 20px;
+}
+
+.footer-grid-fonts li {
+  float: left;
+  padding: 5px;
+}
+
+.footer-grid-fonts_text:hover {
+  color: #a3a3a3;
+}
+
+/* Newsletter box */
+.footer-grid-email_input {
+  padding: 10px;
+  color: #a3a3a3;
+  background: #212121;
+  border: 1px solid #6d3c05;
+  font-family: "Old Standard TT", serif;
+}
+
+.footer-grid-email_send {
+  color: #a3a3a3;
+  background: #212121;
+  border: none;
+  height: 15px;
+  width: 40px;
+  position: relative;
+  left: -56px;
+  font-weight: bold;
+  font-family: "Old Standard TT", serif;
+  height: 36px;
+  width: 51px;
+}
+
+.footer-grid-email_send:hover {
+  background: #6d3c05;
+}
+
+.footer-grid-email_send:active {
+  background: #412302;
+}
+/*# sourceMappingURL=main.css.map */

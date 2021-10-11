@@ -1,0 +1,29 @@
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 0.1rem #86740d solid;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15rem;
+  display: flex;
+  text-align: center;
+  animation: typing 9s steps(15, end), blink-cursor 0.75s infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #86740d;
+  }
+}

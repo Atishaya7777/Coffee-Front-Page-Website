@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.overarch {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url("../Images/hero-image.jpeg");
+
+  opacity: 0.9;
+
+  /* Specific height for the image */
+  height: 110vh;
+  width: 100%;
+
+  /* position and center the image to scale the screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  z-index: 100;
+}
+
+.triangle-left,
+.triangle-right {
+  position: absolute;
+  width: calc(50% - 3em);
+  height: 3em;
+  bottom: 0;
+  color: white;
+}
+
+.triangle-left {
+  left: 0;
+  background: white;
+}
+
+.triangle-right {
+  right: 0;
+  background: white;
+}
+
+.triangle-down {
+  right: 0;
+  left: 0;
+  color: white;
+}
+
+.triangle-left::after,
+.triangle-right::after,
+.triangle-down::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  height: 0;
+  width: 0;
+  border-style: solid;
+  top: 0;
+}
+
+.triangle-left::after {
+  border-width: 1.5em 0 1.5em 3em;
+  border-color: transparent transparent transparent white;
+  right: -3em;
+}
+
+.triangle-right::after {
+  border-width: 1.5em 3em 1.5em 0;
+  border-color: transparent white transparent transparent;
+  left: -3em;
+}
+
+.triangle-down::after {
+  border-width: 0 3em 1.5em 3em;
+  border-color: transparent transparent white transparent;
+  top: calc(110vh - 1.5em);
+  left: calc(50% - 3em);
+}
